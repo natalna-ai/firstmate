@@ -1,0 +1,9 @@
+not ok - help does not require exact second-line placement (missing: 'second line immediately')
+--- output ---
+usage: fm-ensure-agents-md.sh [repo-or-worktree-dir]
+
+To retain equivalent project-owned maintenance guidance without adding the
+canonical section, use this exact first line of AGENTS.md (LF or CRLF):
+<!-- firstmate:maintained-by-project -->
+The mark declares retained guidance, not permission to remove governance.
+Without the first-line mark or exact canonical heading, the helper adds the section.

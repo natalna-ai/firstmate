@@ -1,0 +1,154 @@
+== opted-lf (eol=LF, CLAUDE.md -> AGENTS.md)
+  AGENTS.md first lines: 0000000 < ! - - f i r s t m a t e : m 0000020 a i n t a i n e d - b y - p r o 0000040 j e c t - - > \n < ! - - f i 
+  CLAUDE.md -> AGENTS.md (symlink)
+  AGENTS.md sha256=27440f8eb9df0346
+  $ fm-ensure-agents-md.sh <repo>  -> rc=0
+    unchanged: AGENTS.md with project-retained CLAUDE.md -> AGENTS.md symlink in opted-lf
+  CLAUDE.md -> AGENTS.md (symlink)
+  AGENTS.md sha256=27440f8eb9df0346
+  $ fm-ensure-agents-md.sh <repo>  -> rc=0
+    unchanged: AGENTS.md with project-retained CLAUDE.md -> AGENTS.md symlink in opted-lf
+  CLAUDE.md -> AGENTS.md (symlink)
+  AGENTS.md sha256=27440f8eb9df0346
+
+== opted-crlf (eol=CRLF, CLAUDE.md -> AGENTS.md)
+  AGENTS.md first lines: 0000000 < ! - - f i r s t m a t e : m 0000020 a i n t a i n e d - b y - p r o 0000040 j e c t - - > \r \n < ! - - f 
+  CLAUDE.md -> AGENTS.md (symlink)
+  AGENTS.md sha256=846cf67cd887cb4d
+  $ fm-ensure-agents-md.sh <repo>  -> rc=0
+    unchanged: AGENTS.md with project-retained CLAUDE.md -> AGENTS.md symlink in opted-crlf
+  CLAUDE.md -> AGENTS.md (symlink)
+  AGENTS.md sha256=846cf67cd887cb4d
+  $ fm-ensure-agents-md.sh <repo>  -> rc=0
+    unchanged: AGENTS.md with project-retained CLAUDE.md -> AGENTS.md symlink in opted-crlf
+  CLAUDE.md -> AGENTS.md (symlink)
+  AGENTS.md sha256=846cf67cd887cb4d
+
+== opted-dot-slash-target (eol=LF, CLAUDE.md -> ./AGENTS.md)
+  AGENTS.md first lines: 0000000 < ! - - f i r s t m a t e : m 0000020 a i n t a i n e d - b y - p r o 0000040 j e c t - - > \n < ! - - f i 
+  CLAUDE.md -> ./AGENTS.md (symlink)
+  AGENTS.md sha256=27440f8eb9df0346
+  $ fm-ensure-agents-md.sh <repo>  -> rc=0
+    unchanged: AGENTS.md with project-retained CLAUDE.md -> AGENTS.md symlink in opted-dot-slash-target
+  CLAUDE.md -> ./AGENTS.md (symlink)
+  AGENTS.md sha256=27440f8eb9df0346
+  $ fm-ensure-agents-md.sh <repo>  -> rc=0
+    unchanged: AGENTS.md with project-retained CLAUDE.md -> AGENTS.md symlink in opted-dot-slash-target
+  CLAUDE.md -> ./AGENTS.md (symlink)
+  AGENTS.md sha256=27440f8eb9df0346
+
+== unmarked-lf (eol=LF, CLAUDE.md -> AGENTS.md)
+  AGENTS.md first lines: 0000000 # P r o j e c t m e m o r y 0000020 \n 0000021 
+  CLAUDE.md -> AGENTS.md (symlink)
+  AGENTS.md sha256=03c67c17d8a3f815
+  $ fm-ensure-agents-md.sh <repo>  -> rc=0
+    updated: added ## Maintaining this file to AGENTS.md and wrote CLAUDE.md @AGENTS.md pointer in unmarked-lf
+  CLAUDE.md regular file:
+    | <!-- Points Claude at AGENTS.md via import; edit AGENTS.md, not this file. -->
+    | @AGENTS.md
+  AGENTS.md sha256=8c0423c3be6380b5
+  $ fm-ensure-agents-md.sh <repo>  -> rc=0
+    unchanged: AGENTS.md with CLAUDE.md @AGENTS.md pointer in unmarked-lf
+  CLAUDE.md regular file:
+    | <!-- Points Claude at AGENTS.md via import; edit AGENTS.md, not this file. -->
+    | @AGENTS.md
+  AGENTS.md sha256=8c0423c3be6380b5
+
+== missing-second-mark-crlf (eol=CRLF, CLAUDE.md -> AGENTS.md)
+  AGENTS.md first lines: 0000000 < ! - - f i r s t m a t e : m 0000020 a i n t a i n e d - b y - p r o 0000040 j e c t - - > \r \n # P r o j 
+  CLAUDE.md -> AGENTS.md (symlink)
+  AGENTS.md sha256=6b2690afc4984f98
+  $ fm-ensure-agents-md.sh <repo>  -> rc=0
+    updated: replaced CLAUDE.md symlink with @AGENTS.md pointer in missing-second-mark-crlf
+  CLAUDE.md regular file:
+    | <!-- Points Claude at AGENTS.md via import; edit AGENTS.md, not this file. -->
+    | @AGENTS.md
+  AGENTS.md sha256=6b2690afc4984f98
+  $ fm-ensure-agents-md.sh <repo>  -> rc=0
+    unchanged: AGENTS.md with CLAUDE.md @AGENTS.md pointer in missing-second-mark-crlf
+  CLAUDE.md regular file:
+    | <!-- Points Claude at AGENTS.md via import; edit AGENTS.md, not this file. -->
+    | @AGENTS.md
+  AGENTS.md sha256=6b2690afc4984f98
+
+== keep-mark-on-third-line-lf (eol=LF, CLAUDE.md -> AGENTS.md)
+  AGENTS.md first lines: 0000000 < ! - - f i r s t m a t e : m 0000020 a i n t a i n e d - b y - p r o 0000040 j e c t - - > \n # P r o j e 
+  CLAUDE.md -> AGENTS.md (symlink)
+  AGENTS.md sha256=1f85956c9720fe01
+  $ fm-ensure-agents-md.sh <repo>  -> rc=0
+    updated: replaced CLAUDE.md symlink with @AGENTS.md pointer in keep-mark-on-third-line-lf
+  CLAUDE.md regular file:
+    | <!-- Points Claude at AGENTS.md via import; edit AGENTS.md, not this file. -->
+    | @AGENTS.md
+  AGENTS.md sha256=1f85956c9720fe01
+  $ fm-ensure-agents-md.sh <repo>  -> rc=0
+    unchanged: AGENTS.md with CLAUDE.md @AGENTS.md pointer in keep-mark-on-third-line-lf
+  CLAUDE.md regular file:
+    | <!-- Points Claude at AGENTS.md via import; edit AGENTS.md, not this file. -->
+    | @AGENTS.md
+  AGENTS.md sha256=1f85956c9720fe01
+
+== marks-swapped-crlf (eol=CRLF, CLAUDE.md -> AGENTS.md)
+  AGENTS.md first lines: 0000000 < ! - - f i r s t m a t e : k 0000020 e e p - c l a u d e - s y m l i 0000040 n k - - > \r \n < ! - - f i r 
+  CLAUDE.md -> AGENTS.md (symlink)
+  AGENTS.md sha256=039b41e37d0ded13
+  $ fm-ensure-agents-md.sh <repo>  -> rc=0
+    updated: added ## Maintaining this file to AGENTS.md and wrote CLAUDE.md @AGENTS.md pointer in marks-swapped-crlf
+  CLAUDE.md regular file:
+    | <!-- Points Claude at AGENTS.md via import; edit AGENTS.md, not this file. -->
+    | @AGENTS.md
+  AGENTS.md sha256=43d00708cecc57b0
+  $ fm-ensure-agents-md.sh <repo>  -> rc=0
+    unchanged: AGENTS.md with CLAUDE.md @AGENTS.md pointer in marks-swapped-crlf
+  CLAUDE.md regular file:
+    | <!-- Points Claude at AGENTS.md via import; edit AGENTS.md, not this file. -->
+    | @AGENTS.md
+  AGENTS.md sha256=43d00708cecc57b0
+
+== keep-mark-without-first-mark-lf (eol=LF, CLAUDE.md -> AGENTS.md)
+  AGENTS.md first lines: 0000000 # P r o j e c t m e m o r y 0000020 \n < ! - - f i r s t m a t e : 0000040 k e e p - c l a u d e - s y m l 
+  CLAUDE.md -> AGENTS.md (symlink)
+  AGENTS.md sha256=4db51a5a82b34f8c
+  $ fm-ensure-agents-md.sh <repo>  -> rc=0
+    updated: added ## Maintaining this file to AGENTS.md and wrote CLAUDE.md @AGENTS.md pointer in keep-mark-without-first-mark-lf
+  CLAUDE.md regular file:
+    | <!-- Points Claude at AGENTS.md via import; edit AGENTS.md, not this file. -->
+    | @AGENTS.md
+  AGENTS.md sha256=69b35bd4609b8760
+  $ fm-ensure-agents-md.sh <repo>  -> rc=0
+    unchanged: AGENTS.md with CLAUDE.md @AGENTS.md pointer in keep-mark-without-first-mark-lf
+  CLAUDE.md regular file:
+    | <!-- Points Claude at AGENTS.md via import; edit AGENTS.md, not this file. -->
+    | @AGENTS.md
+  AGENTS.md sha256=69b35bd4609b8760
+
+== keep-mark-trailing-space-lf (eol=LF, CLAUDE.md -> AGENTS.md)
+  AGENTS.md first lines: 0000000 < ! - - f i r s t m a t e : m 0000020 a i n t a i n e d - b y - p r o 0000040 j e c t - - > \n < ! - - f i 
+  CLAUDE.md -> AGENTS.md (symlink)
+  AGENTS.md sha256=1f0669ab6d4f274e
+  $ fm-ensure-agents-md.sh <repo>  -> rc=0
+    updated: replaced CLAUDE.md symlink with @AGENTS.md pointer in keep-mark-trailing-space-lf
+  CLAUDE.md regular file:
+    | <!-- Points Claude at AGENTS.md via import; edit AGENTS.md, not this file. -->
+    | @AGENTS.md
+  AGENTS.md sha256=1f0669ab6d4f274e
+  $ fm-ensure-agents-md.sh <repo>  -> rc=0
+    unchanged: AGENTS.md with CLAUDE.md @AGENTS.md pointer in keep-mark-trailing-space-lf
+  CLAUDE.md regular file:
+    | <!-- Points Claude at AGENTS.md via import; edit AGENTS.md, not this file. -->
+    | @AGENTS.md
+  AGENTS.md sha256=1f0669ab6d4f274e
+
+== opted-wrong-target-lf (eol=LF, CLAUDE.md -> OTHER.md)
+  AGENTS.md first lines: 0000000 < ! - - f i r s t m a t e : m 0000020 a i n t a i n e d - b y - p r o 0000040 j e c t - - > \n < ! - - f i 
+  CLAUDE.md -> OTHER.md (symlink)
+  AGENTS.md sha256=27440f8eb9df0346
+  $ fm-ensure-agents-md.sh <repo>  -> rc=1
+    conflict: CLAUDE.md is a symlink in opted-wrong-target-lf but does not point to AGENTS.md
+  CLAUDE.md -> OTHER.md (symlink)
+  AGENTS.md sha256=27440f8eb9df0346
+  $ fm-ensure-agents-md.sh <repo>  -> rc=1
+    conflict: CLAUDE.md is a symlink in opted-wrong-target-lf but does not point to AGENTS.md
+  CLAUDE.md -> OTHER.md (symlink)
+  AGENTS.md sha256=27440f8eb9df0346
+

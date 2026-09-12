@@ -1,0 +1,13 @@
+== opted AGENTS.md (LF), CLAUDE.md absent
+  rc=0 wrote: CLAUDE.md @AGENTS.md pointer in no-claude-LF
+  CLAUDE.md regular file:
+    | <!-- Points Claude at AGENTS.md via import; edit AGENTS.md, not this file. -->
+    | @AGENTS.md
+== opted AGENTS.md (CRLF), CLAUDE.md absent
+  rc=0 wrote: CLAUDE.md @AGENTS.md pointer in no-claude-CRLF
+  CLAUDE.md regular file:
+    | <!-- Points Claude at AGENTS.md via import; edit AGENTS.md, not this file. -->
+    | @AGENTS.md
+== AGENTS.md absent, CLAUDE.md -> AGENTS.md (dangling)
+  rc=0 created: AGENTS.md and wrote CLAUDE.md @AGENTS.md pointer in dangling
+  CLAUDE.md regular file (pointer)

@@ -1,0 +1,3 @@
+not ok - retained symlink run 1 did not report unchanged (missing: 'unchanged:')
+--- output ---
+updated: replaced CLAUDE.md symlink with @AGENTS.md pointer in /tmp/fm-ensure-agents-md.7DJ480/retained-symlink.gnVaT1
